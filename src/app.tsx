@@ -13,8 +13,17 @@ export const App = () => {
 	};
 	return (
 		<>
-			<div className={styles.pageWrapper}>
+			<div
+				className={`${styles.pageWrapper} ${
+					overlayStatus ? styles.overlayActive : ''
+				} `}
+			>
+				<a href='#main' className={styles.skipToMain}>
+					Skip to main content
+				</a>
+
 				<Header onStatusChange={handleStatusChange} />
+
 				<div id='main' className={styles.main}>
 					<Intro />
 					<Form />

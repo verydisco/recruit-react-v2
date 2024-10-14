@@ -4,6 +4,28 @@
 	overflow: auto;
 	min-height: 100vh;
 	font-family: Arial, Helvetica, sans-serif;
+	&.overlayActive {
+		overflow-x: hidden;
+		.skipToMain,
+		.main {
+			display: none;
+		}
+	}
+}
+
+.skipToMain {
+	position: relative;
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	background: #d9d8d7;
+	position: absolute;
+	transform: translateX(-200%);
+	transition: transform 0s;
+	&:focus {
+		position: static;
+		transform: translateX(0);
+	}
 }
 
 .main {
