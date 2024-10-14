@@ -17,7 +17,7 @@ export const Header = ({ onStatusChange }) => {
 			<div className={styles.menuToggle}>
 				<a
 					href='#'
-					role='menubutton'
+					role='button'
 					aria-label={isOpen ? 'close main menu' : 'open main menu'}
 					aria-expanded={isOpen ? 'true' : 'false'}
 					onClick={toggleStatus}
