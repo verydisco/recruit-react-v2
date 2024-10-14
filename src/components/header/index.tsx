@@ -13,25 +13,27 @@ export const Header = ({ onStatusChange }) => {
 
 	const headerTitle = { pageTitle: 'Register card form' };
 	return (
-		<div className={styles.headerWrapper}>
-			<div className={styles.menuToggle}>
-				<a
-					href='#'
-					role='button'
-					aria-label={isOpen ? 'close main menu' : 'open main menu'}
-					aria-expanded={isOpen ? 'true' : 'false'}
-					onClick={toggleStatus}
-					className={`${styles.menuLink}  ${
-						isOpen ? `${styles.menuOpen}` : ''
-					}`}
-				>
-					<i className={styles.hamburger} aria-hidden='true'></i>
-				</a>
-			</div>
-			{isOpen && <NavOverlay />}
-			<header>
+		<header role='header'>
+			<div className={styles.headerWrapper}>
+				<div className={styles.menuToggle}>
+					<a
+						href='#'
+						role='button'
+						id='menuToggleButton'
+						aria-label={isOpen ? 'close main menu' : 'open main menu'}
+						aria-expanded={isOpen ? 'true' : 'false'}
+						onClick={toggleStatus}
+						className={`${styles.menuLink}  ${
+							isOpen ? `${styles.menuOpen}` : ''
+						}`}
+					>
+						<i className={styles.hamburger} aria-hidden='true'></i>
+					</a>
+				</div>
+				{isOpen && <NavOverlay />}
+
 				<h1 className={styles.headerTitle}>{headerTitle.pageTitle}</h1>
-			</header>
-		</div>
+			</div>
+		</header>
 	);
 };
