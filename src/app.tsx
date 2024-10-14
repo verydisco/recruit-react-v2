@@ -13,11 +13,12 @@ export const App = () => {
 	};
 	return (
 		<>
-			<div>
+			<div className={styles.pageWrapper}>
 				<Header onStatusChange={handleStatusChange} />
-				<Intro />
-				<Form />
-				{overlayStatus ? 'open' : 'closed'}
+				<div id='main' className={styles.main}>
+					<Intro />
+					<Form />
+				</div>
 			</div>
 		</>
 	);

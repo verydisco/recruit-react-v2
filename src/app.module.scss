@@ -1,4 +1,21 @@
-.demo {
-  font-family: "Roboto";
-  color: orange;
+.pageWrapper {
+	display: block;
+	background: #f2f2eb;
+	overflow: auto;
+	min-height: 100vh;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 20px;
+	min-height: calc(100vh - 100px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@media (min-width: 800px) {
+		min-height: auto;
+	}
 }
