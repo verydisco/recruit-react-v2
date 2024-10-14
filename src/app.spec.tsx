@@ -18,7 +18,7 @@ describe('Register card title', () => {
 describe('Menu toggle', () => {
 	it('should be present', () => {
 		render(<App />);
-		const header = screen.getByRole('header');
+		const header = screen.getByRole('banner');
 		const menuButton = within(header).queryByRole('button');
 
 		expect(menuButton).toBeInTheDocument();
@@ -28,7 +28,7 @@ describe('Menu toggle', () => {
 describe('Menu toggle', () => {
 	it('by default on click sets aria expand true  ', () => {
 		render(<App />);
-		const header = screen.getByRole('header');
+		const header = screen.getByRole('banner');
 		const menuButton = within(header).getByRole('button');
 		fireEvent.click(menuButton);
 		expect(menuButton.getAttribute('aria-expanded')).toBe('true');
@@ -38,7 +38,7 @@ describe('Menu toggle', () => {
 describe('Menu toggle', () => {
 	it('when open and clicked sets aria expand false  ', () => {
 		render(<App />);
-		const header = screen.getByRole('header');
+		const header = screen.getByRole('banner');
 		const menuButton = within(header).getByRole('button');
 		fireEvent.click(menuButton);
 		expect(menuButton.getAttribute('aria-expanded')).toBe('true');
@@ -50,7 +50,7 @@ describe('Menu toggle', () => {
 describe('Menu toggle', () => {
 	it('when open page menu heading is readable', () => {
 		render(<App />);
-		const header = screen.getByRole('header');
+		const header = screen.getByRole('banner');
 		const menuButton = within(header).getByRole('button');
 		fireEvent.click(menuButton);
 		expect(menuButton.getAttribute('aria-expanded')).toBe('true');

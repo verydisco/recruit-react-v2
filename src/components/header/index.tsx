@@ -13,7 +13,7 @@ export const Header = ({ onStatusChange }) => {
 
 	const headerTitle = { pageTitle: 'Register card form' };
 	return (
-		<header role='header'>
+		<header role='banner'>
 			<div className={styles.headerWrapper}>
 				<div className={styles.menuToggle}>
 					<a
