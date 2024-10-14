@@ -1,0 +1,41 @@
+.overlay {
+	display: none;
+	display: block;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #8c8b88;
+}
+
+.overlayContent {
+	display: block;
+	margin: 0 auto;
+}
+
+.overlayHeading {
+	margin-top: 0;
+	font-size: 40px;
+	line-height: 1.2rem;
+	text-align: center;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlayCopyWrapper {
+	background: #d9d8d7;
+	padding: 30px 20px 50px 20px;
+	min-height: calc(100vh - 100px);
+	@media (min-width: 800px) {
+		padding: 30px 100px 50px 100px;
+	}
+}
+
+.overlayCopy {
+	max-width: 800px;
+	margin: 0 auto;
+	font-size: 18px;
+}

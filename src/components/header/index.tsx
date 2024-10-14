@@ -10,9 +10,11 @@ export const Header = ({ onStatusChange }) => {
 		setIsOpen(newStatus);
 		onStatusChange(newStatus);
 	};
+
+	const headerTitle = { pageTitle: 'Register card form' };
 	return (
-		<div>
-			<div>
+		<div className={styles.headerWrapper}>
+			<div className={styles.menuToggle}>
 				<a
 					href='#'
 					role='menubutton'
@@ -27,7 +29,9 @@ export const Header = ({ onStatusChange }) => {
 				</a>
 			</div>
 			{isOpen && <NavOverlay />}
-			<h1>Register card form</h1>
+			<header>
+				<h1 className={styles.headerTitle}>{headerTitle.pageTitle}</h1>
+			</header>
 		</div>
 	);
 };

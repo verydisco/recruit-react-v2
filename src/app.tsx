@@ -1,4 +1,5 @@
 import React, { useState, FC } from 'react';
+import './normalize.module.scss';
 import * as styles from './app.module.scss';
 import { Header } from './components/header';
 import { Intro } from './components/intro';
@@ -12,12 +13,11 @@ export const App = () => {
 	};
 	return (
 		<>
-			<h1 className={styles.demo}>Welcome to your technical test!</h1>
 			<div>
-				{overlayStatus ? 'open' : 'closed'}
 				<Header onStatusChange={handleStatusChange} />
 				<Intro />
 				<Form />
+				{overlayStatus ? 'open' : 'closed'}
 			</div>
 		</>
 	);

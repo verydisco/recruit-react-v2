@@ -1,3 +1,31 @@
+.headerWrapper {
+	display: block;
+	width: 100%;
+	background: #8c8b88;
+	top: 0;
+	position: relative;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.headerTitle {
+	margin: 0;
+	font-size: 40px;
+	line-height: 1.2rem;
+}
+
+.menuToggle {
+	position: absolute;
+	z-index: 2;
+	width: 60px;
+	height: 50px;
+	background: #00010d;
+	top: 25px;
+	left: 20px;
+}
+
 .menuLink {
 	width: 60px;
 	height: 50px;
